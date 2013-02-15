@@ -24,36 +24,36 @@ But jquery.WebSockets adds some nice features:
 
 example:
 
-<code>
-    // The WebSocket-Object (with resource + fallback)
-    var ws = $.WebSocket('ws://127.0.0.1:9300', null, {http: 'http://127.0.0.1:81/Lab/Websocket/Data/poll.php'});
+```javascript
+// The WebSocket-Object (with resource + fallback)
+var ws = $.WebSocket ('ws://127.0.0.1:9300', null, {http: 'http://127.0.0.1:81/Lab/Websocket/Data/poll.php'});                                              
 
-    // WebSocket onerror event triggered also in fallback
-    ws.onerror = function(e) {
-        console.log('Error with WebSocket uid: ' + e.target.uid);
-    };
+// WebSocket onerror event triggered also in fallback
+ws.onerror = function (e) {
+    console.log ('Error with WebSocket uid: ' + e.target.uid);                                                                                              
+};                                                                                                                                                          
 
-    /**
-     * demonstrate multiplexing
-     */
-    var pipe1;
+/**
+ * demonstrate multiplexing
+ */
+var pipe1;                                                                                                                                                  
 
-    // if connection is opened => start opening a pipe (multiplexing)
-    ws.onopen = function() {
-        //
-        pipe1 = ws.registerPipe('user/all', null, {
-            onopen: function() {
-                console.log('pipe1 (' + this.uid + ') connected!');
-            },
-            onmessage: function(e) {
-                console.log('< pipe1 : ' + e.data);
-            },
-            onerror: function(e) {
-                console.log('< pipe1 error : ' + e.data);
-            },
-            onclose: function() {
-                console.log('pipe1 (' + pipe.uid + ') connection closed!');
-            }
-        });
-    };
-</code>
+// if connection is opened => start opening a pipe (multiplexing)
+ws.onopen = function () {
+    //
+    pipe1 = ws.registerPipe ('user/all', null, {
+        onopen: function () {
+            console.log ('pipe1 (' + this.uid + ') connected!');                                                                                            
+        },
+        onmessage: function (e) {
+            console.log ('< pipe1 : ' + e.data);                                                                                                            
+        },
+        onerror: function (e) {
+            console.log ('< pipe1 error : ' + e.data);                                                                                                      
+        },
+        onclose: function () {
+            console.log ('pipe1 (' + pipe.uid + ') connection closed!');                                                                                    
+        }
+    });                                                                                                                                                     
+};  
+```
