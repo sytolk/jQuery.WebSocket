@@ -1,5 +1,6 @@
-jquery.WebSocket
-================
+<img src="https://avatars2.githubusercontent.com/u/514566?v=3&u=4615dfc4970d93dea5d3eaf996b7903ee6e24e20&s=140" align="right" />
+---
+# jquery.WebSocket
 
 jquery.WebSocket enables WebSocket support for all Browsers. In older
 Browsers the WebSocket is emulated by using AJAX Long Polling as fallback.
