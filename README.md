@@ -1,6 +1,5 @@
-jquery.WebSocket
-================
-
+<img src="https://avatars2.githubusercontent.com/u/514566?v=3&u=4615dfc4970d93dea5d3eaf996b7903ee6e24e20&s=140" align="right" />
+---
 jquery.WebSocket enables WebSocket support for all Browsers. In older
 Browsers the WebSocket is emulated by using AJAX Long Polling as fallback.
 But all instances of WebSocket providing the same interface and the same
@@ -57,3 +56,11 @@ ws.onopen = function () {
     });                                                                                                                                                     
 };  
 ```
+
+
+## Sponsors  
+Thanks to our sponsors and supporters:  
+
+| JetBrains | Navicat |
+|---|---|
+| <a href="https://www.jetbrains.com/phpstorm/" title="PHP IDE :: JetBrains PhpStorm" target="_blank"><img src="https://www.jetbrains.com/phpstorm/documentation/docs/logo_phpstorm.png"></img></a> | <a href="http://www.navicat.com/" title="Navicat GUI - DB GUI-Admin-Tool for MySQL, MariaDB, SQL Server, SQLite, Oracle & PostgreSQL" target="_blank"><img src="http://upload.wikimedia.org/wikipedia/en/9/90/PremiumSoft_Navicat_Premium_Logo.png" height="55" /></a>  |
